@@ -20,7 +20,11 @@ app.use("/api/card", cardRouter);
 app.use("/api/orders", orderRouter);
 app.use("/api/reviews", reviewRouter);
 
-// Global error handler
+app.get("/", (req: Request, res: Response) => {
+  res.json({ message: "E-ticaret API çalışıyor!" });
+});
+
+// Global error handler (basit)
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   console.error(err.stack);
   res.status(500).json({ error: err.message });
