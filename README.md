@@ -29,10 +29,14 @@ This project is a **RESTful API** for basic e-commerce operations, built with Ex
 git clone git@github.com:melikebicer67/ecommerce-api.git
 cd ecommerce-api
 npm install
+```
+
+
 
 ### 2. Install Dependencies
 ```bash
 npm install
+```
 
 ### 3. Setup environment variables
 Create a .env file from the example:
@@ -45,12 +49,14 @@ JWT_EXPIRES_IN="7d"
 
 ### 4. Database Setup
 Run Migrations
+Seed initial data (admin, products, etc.)
+
 ```bash
 npx prisma migrate dev --name init
-Seed initial data (admin, products, etc.)
-```bash
 npx tsx prisma/seed.ts
+```
 
 ### 5. Run the API
 ```bash
 npm run dev
+```
