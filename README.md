@@ -74,5 +74,5 @@ Reviews include a rating and comment, and are linked to both the product and the
 This logic is handled via middleware that checks the user's authentication and verifies eligibility before allowing review creation.
 
 
-API DOC ==== 📥 [Download API Documentation](./docs/ecommerceApiDoc.pdf)
+API DOC ==== 📥 [Download API Documentation](./src/docs/ecommerceApiDoc.pdf)
 
