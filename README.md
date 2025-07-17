@@ -60,3 +60,15 @@ npx tsx prisma/seed.ts
 ```bash
 npm run dev
 ```
+
+💬 Product Reviews (with Authorization)
+Users can leave reviews on products they've purchased.
+The API ensures that:
+
+Only authenticated users can leave reviews.
+
+A user cannot review the same product more than once.
+
+Reviews include a rating and comment, and are linked to both the product and the user.
+
+This logic is handled via middleware that checks the user's authentication and verifies eligibility before allowing review creation.
