@@ -12,7 +12,7 @@ const SALT_ROUNDS = 10;
 // Register - Kullanıcı oluştur
 router.post("/register", async (req: Request, res: Response) => {
   try {
-    const { email, password, name } = req.body;
+    const { email, password, name, role } = req.body;
 
     if (!email || !password) {
       return res.status(400).json({ error: "Email ve şifre gerekli" });
@@ -30,6 +30,7 @@ router.post("/register", async (req: Request, res: Response) => {
         email,
         password: hashedPassword,
         name,
+        role,
       },
       select: {
         id: true,
